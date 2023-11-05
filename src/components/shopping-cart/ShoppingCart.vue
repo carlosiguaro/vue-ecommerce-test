@@ -44,7 +44,7 @@
             </section>
             <footer>
                 <label>Total:</label>
-                <label>{{ formatCurrency(totalDelCarrito) }}</label>
+                <label>{{ formatCurrency(cartTotal) }}</label>
             </footer>
         </div>
     </div>
@@ -65,7 +65,7 @@ const props = defineProps({
 });
 const toast = useToast();
 
-const totalDelCarrito = computed(() => store.getters['cart/cartTotal']);
+const cartTotal = computed(() => store.getters['cart/cartTotal']);
 const cartItems = computed(() => store.state.cart.cartItems);
 
 const formatCurrency = (value) => {
